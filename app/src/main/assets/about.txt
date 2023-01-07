@@ -1,0 +1,24 @@
+This game works by simply guessing the letters that make up a country using the length of country name as hint.
+
+To enter a letter, a keyboard has been specially designed for you which changes color based on your input.
+
+For a valid letter, the background color changes to green, while for a wrong input/guess
+It changes to red.
+A key can't be entered more than once.
+
+Example, - - - - - has 5 dashes
+It could be one of Spain, Japan, China, Ghana or any other country made of 5 letters.
+Assuming the generated word is Ghana
+
+You can enter "a" on the keyboard, it changes to - - a - a
+It replaces all occurrences of the valid letter.
+
+A valid input grants at least 2 point => 2 points per letter, "a" in "Ghana" entered once would allocate you 4 points
+
+Once complete (all dashes replaced), it generates a new word and the cycle goes on.
+A word can't be generated more than once in a single run.
+
+Entering an invalid letter, like "p" in this case would make no change to the dashed text.
+You are allowed to make 5 wrong guesses for each generated word.
+After that, the game ends, displays the generated word, and your score.
+

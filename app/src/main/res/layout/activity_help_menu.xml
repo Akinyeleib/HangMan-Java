@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelpMenu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/help_title"
+            android:gravity="center"
+            android:text="How to Play"/>
+
+        <TextView
+            android:id="@+id/about"
+            style="@style/help_content"
+            android:text="about"/>
+
+        <TextView
+            style="@style/help_title"
+            android:text="Winning"/>
+
+        <TextView
+            style="@style/help_title"
+            android:text="Level"/>
+
+        <TextView
+            android:id="@+id/level"
+            style="@style/help_content"
+            android:text="level"/>
+
+        <TextView
+            style="@style/help_title"
+            android:text="High Scores"/>
+
+        <TextView
+            android:id="@+id/high_score"
+            style="@style/help_content"
+            android:text="high score"/>
+
+        <TextView
+            style="@style/help_title"
+            android:lines="3"
+            android:text="Restart"/>
+
+    </LinearLayout>
+
+</ScrollView>

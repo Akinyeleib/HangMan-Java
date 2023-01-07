@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Hang Man</string>
+    <string name="mainmenu">Mainmenu</string>
+    <string name="continue_text">Continue</string>
+    <string name="new_game">New Game</string>
+    <string name="level">Level</string>
+    <string name="high_scores">High Scores</string>
+    <string name="quit">Quit</string>
+    <string name="help_menu">Help Menu</string>
+    <string name="level1">Novice:</string>
+    <string name="level2">Master:</string>
+    <string name="level3">Legendary:</string>
+    <string name="random">Random:</string>
+    <string name="reset_scores">Reset Scores</string>
+    <string name="about">Meet the Developer</string>
+    <string name="author">Akinyele Ibrahim</string>
+
+    <!--    Instrutions menu-->
+
+
+</resources>

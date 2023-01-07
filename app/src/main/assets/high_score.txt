@@ -1,0 +1,4 @@
+High Scores are levels dependent
+i.e;
+Scores for each level are independent
+Scores can be reset to 0, by clicking the reset button.

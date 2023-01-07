@@ -1,0 +1,7 @@
+Generated word depends on selected level
+
+Beginner fetches shorter words, considered the easiest level
+Next is master
+Legendary fetches much longer words
+Random - Level mixes words from every other levels
+

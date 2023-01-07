@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000099"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/high_score_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Highest Score"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/high_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/high_score_label"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:textColor="#FFFF00"
+        android:text="200"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/score_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="Score"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/score_label"
+        android:layout_marginEnd="30dp"
+        android:text="0"
+        android:textColor="#FFFF00"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/guess"
+        style="@style/txtView"
+        android:textColor="@color/white"
+        android:letterSpacing="0.2"
+        android:layout_marginVertical="100dp"
+        android:text="Hello World!" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hint_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/keys"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="hint_btn_click"
+        android:src="@drawable/ic_help"
+        app:rippleColor="@color/orange" />
+    
+    <ImageView
+        android:id="@+id/life_logo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/keys"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_life" />
+
+    <TextView
+        android:id="@+id/life"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/orange"
+        android:text="0"
+        android:layout_above="@+id/life_logo"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:textColor="@color/orange"
+        android:text="3"
+        android:layout_above="@+id/hint_btn"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/keys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <!--        Row One-->
+
+        <LinearLayout style="@style/layouts">
+
+            <Button
+                android:id="@+id/btn_q"
+                style="@style/buttons"
+                android:text="Q" />
+
+            <Button
+                android:id="@+id/btn_w"
+                style="@style/buttons"
+                android:text="W" />
+
+            <Button
+                android:id="@+id/btn_e"
+                style="@style/buttons"
+                android:text="E" />
+
+            <Button
+                android:id="@+id/btn_r"
+                style="@style/buttons"
+                android:text="R" />
+
+            <Button
+                android:id="@+id/btn_t"
+                style="@style/buttons"
+                android:text="T" />
+
+            <Button
+                android:id="@+id/btn_y"
+                style="@style/buttons"
+                android:text="Y" />
+
+            <Button
+                android:id="@+id/btn_u"
+                style="@style/buttons"
+                android:text="U" />
+
+            <Button
+                android:id="@+id/btn_i"
+                style="@style/buttons"
+                android:text="I" />
+
+            <Button
+                android:id="@+id/btn_o"
+                style="@style/buttons"
+                android:text="O" />
+
+            <Button
+                android:id="@+id/btn_p"
+                style="@style/buttons"
+                android:text="P" />
+
+        </LinearLayout>
+
+        <!--        Row Two-->
+
+        <LinearLayout style="@style/layouts">
+
+            <Button
+                android:id="@+id/btn_a"
+                style="@style/buttons"
+                android:text="A" />
+
+            <Button
+                android:id="@+id/btn_s"
+                style="@style/buttons"
+                android:text="S" />
+
+            <Button
+                android:id="@+id/btn_d"
+                style="@style/buttons"
+                android:text="D" />
+
+            <Button
+                android:id="@+id/btn_f"
+                style="@style/buttons"
+                android:text="F" />
+
+            <Button
+                android:id="@+id/btn_g"
+                style="@style/buttons"
+                android:text="G" />
+
+            <Button
+                android:id="@+id/btn_h"
+                style="@style/buttons"
+                android:text="H" />
+
+            <Button
+                android:id="@+id/btn_j"
+                style="@style/buttons"
+                android:text="J" />
+
+            <Button
+                android:id="@+id/btn_k"
+                style="@style/buttons"
+                android:text="K" />
+
+            <Button
+                android:id="@+id/btn_l"
+                style="@style/buttons"
+                android:text="L" />
+
+        </LinearLayout>
+
+        <!--        Row Three-->
+
+        <LinearLayout style="@style/layouts">
+
+            <Button
+                android:id="@+id/btn_z"
+                style="@style/buttons"
+                android:text="Z" />
+
+            <Button
+                android:id="@+id/btn_x"
+                style="@style/buttons"
+                android:text="X" />
+
+            <Button
+                android:id="@+id/btn_c"
+                style="@style/buttons"
+                android:text="C" />
+
+            <Button
+                android:id="@+id/btn_v"
+                style="@style/buttons"
+                android:text="V" />
+
+            <Button
+                android:id="@+id/btn_b"
+                style="@style/buttons"
+                android:text="B" />
+
+            <Button
+                android:id="@+id/btn_n"
+                style="@style/buttons"
+                android:text="N" />
+
+            <Button
+                android:id="@+id/btn_M"
+                style="@style/buttons"
+                android:text="M" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentBottom="true"
+        android:text="00"
+        android:textColor="@color/white"
+        android:layout_alignParentStart="true"
+        android:textSize="30sp"/>
+
+
+</RelativeLayout>

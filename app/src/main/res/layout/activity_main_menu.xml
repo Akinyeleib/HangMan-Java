@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#306520"
+    tools:context=".MainMenu">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="50dp"
+        android:fontFamily="@font/irish_grover"
+        android:gravity="center"
+        android:text="@string/mainmenu"
+        android:textColor="#C63F3F"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/continue_text"
+            style="@style/menu_text"
+            android:text="@string/continue_text" />
+
+        <Button
+            android:id="@+id/new_game"
+            style="@style/menu_text"
+            android:text="@string/new_game" />
+
+        <Button
+            android:id="@+id/level"
+            style="@style/menu_text"
+            android:text="@string/level" />
+
+        <Button
+            android:id="@+id/help"
+            style="@style/menu_text"
+            android:text="@string/help_menu" />
+
+        <Button
+            android:id="@+id/high_scores"
+            style="@style/menu_text"
+            android:text="@string/high_scores" />
+
+        <Button
+            android:id="@+id/about"
+            style="@style/menu_text"
+            android:text="@string/about" />
+
+        <Button
+            android:id="@+id/quit"
+            style="@style/menu_text"
+            android:text="@string/quit" />
+
+    </LinearLayout>
+
+</RelativeLayout>
