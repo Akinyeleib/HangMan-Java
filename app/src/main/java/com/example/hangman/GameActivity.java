@@ -31,7 +31,7 @@ import java.util.regex.Pattern;
 public class GameActivity extends AppCompatActivity {
 
     Button hint_btn;
-    boolean isHighScore = false;
+    boolean isHighScore = false, isPaused = false;
     TextView guess, high_score, hint, score, timer, life;
     long sec, the_high_score;
     short point_per_letter = 2, rightAttempts = 0, the_score = 0, wrongAttempts = 0, max_life = 3, the_life = max_life, time_per_letter = 20;
@@ -87,20 +87,6 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
-    // To pause timer on minimize
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.w("warn", "Paused");
-    }
-
-    // To resume timer on restart
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.w("warn", "Restart");
-    }
-
     //    @Override
 //    public void onBackPressed() {
 //        super.onBackPressed();
@@ -131,11 +117,32 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
+    // To pause timer on minimize
+    @Override
+    protected void onPause() {
+        super.onPause();
+        downTimer.cancel();
+        isPaused = true;
+        Log.w("warn", "Paused");
+    }
+
+    // To resume timer on restart
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        loadTimer();
+        downTimer.start();
+        Log.w("warn", "Restart");
+    }
+
     private void loadTimer() {
 
-        downTimer = new CountDownTimer(time_per_letter * 1000, 1100) {
+        downTimer = new CountDownTimer((isPaused ? sec : time_per_letter) * 1000, 1100) {
+
             @Override
             public void onTick(long millisUntilFinished) {
+                isPaused = false;
+
                 NumberFormat numberFormat = new DecimalFormat("00");
                 sec = (millisUntilFinished / 1000) % 60;
                 timer.setText(numberFormat.format(sec));
