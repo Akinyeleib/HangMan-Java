@@ -75,7 +75,9 @@ public class MainMenu extends AppCompatActivity {
         level.setOnClickListener(v -> {
             AlertDialog.Builder b = new AlertDialog.Builder(MainMenu.this);
             b.setTitle("Select Level");
-            String[] types = {"Random", "Beginner", "Master", "Legendary"};
+
+            String [] types = getResources().getStringArray(R.array.gameLevels);
+
             b.setItems(types, (dialog, which) -> {
                 game_level = types[which];
 
@@ -83,6 +85,7 @@ public class MainMenu extends AppCompatActivity {
                 editor.commit();
             });
             b.show();
+
         });
 
         help_menu.setOnClickListener(v -> {

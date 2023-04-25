@@ -15,6 +15,14 @@
     <string name="about">Meet the Developer</string>
     <string name="author">Akinyele Ibrahim</string>
 
+    <!--    Game Levels    -->
+    <string-array name="gameLevels">
+        <item>Random</item>
+        <item>Beginner</item>
+        <item>Master</item>
+        <item>Legendary</item>
+    </string-array>
+
     <!--    Instrutions menu-->
 
 
