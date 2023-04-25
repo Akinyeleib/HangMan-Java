@@ -19,7 +19,7 @@
     <string-array name="gameLevels">
         <item>Random</item>
         <item>Beginner</item>
-        <item>Master</item>
+        <item>Master II</item>
         <item>Legendary</item>
     </string-array>
 
