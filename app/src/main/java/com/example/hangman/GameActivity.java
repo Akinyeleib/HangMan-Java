@@ -190,21 +190,6 @@ public class GameActivity extends AppCompatActivity {
         String [] types = getResources().getStringArray(R.array.gameLevels);
         String level1 = types[0];
 
-//        switch (level) {
-//            case "Beginner":
-//                selected_country_list = level_1_countries;
-//                break;
-//            case "Master":
-//                selected_country_list = level_2_countries;
-//                break;
-//            case "Legendary":
-//                selected_country_list = level_3_countries;
-//                break;
-//            default:
-//                selected_country_list = Countries;
-//                break;
-//        }
-
         if (level.equals(types[0]))
             selected_country_list = level_1_countries;
         else if (level.equals(types[1]))
