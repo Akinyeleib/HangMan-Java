@@ -184,14 +184,10 @@ public class GameActivity extends AppCompatActivity {
 
     @NonNull
     private void getLevel() {
-//        level = HelperClass.readFromFile("level.txt", getApplicationContext());
 
         level = sharedPreferences.getString("gameLevel", "Master");
 
         switch (level) {
-            default:
-                selected_country_list = Countries;
-                break;
             case "Beginner":
                 selected_country_list = level_1_countries;
                 break;
@@ -200,6 +196,9 @@ public class GameActivity extends AppCompatActivity {
                 break;
             case "Legendary":
                 selected_country_list = level_3_countries;
+                break;
+            default:
+                selected_country_list = Countries;
                 break;
         }
         Toast.makeText(this, "Level: " + level, Toast.LENGTH_SHORT).show();
