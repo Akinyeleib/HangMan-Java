@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -12,6 +13,8 @@ public class MainMenu extends AppCompatActivity {
 
     TextView about, continue_text, new_game, level, help_menu, high_scores, quit;
     String game_level;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,10 @@ public class MainMenu extends AppCompatActivity {
 
         quit = findViewById(R.id.quit);
 
+        // preferences
+        sharedPreferences = getSharedPreferences("gameLevel", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
     }
 
     void actionListeners() {
@@ -71,7 +78,9 @@ public class MainMenu extends AppCompatActivity {
             String[] types = {"Random", "Beginner", "Master", "Legendary"};
             b.setItems(types, (dialog, which) -> {
                 game_level = types[which];
-                HelperClass.writeToFile(game_level, "level.txt", getApplicationContext());
+//                HelperClass.writeToFile(game_level, "level.txt", getApplicationContext());
+                editor.putString("gameLevel", game_level);
+                editor.commit();
             });
             b.show();
         });
