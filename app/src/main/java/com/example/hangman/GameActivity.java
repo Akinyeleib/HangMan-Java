@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActionBar;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -41,6 +42,8 @@ public class GameActivity extends AppCompatActivity {
     String level, newText;
     ArrayList<Button> buttons;
     ArrayList <String> Countries, level_1_countries, level_2_countries, level_3_countries, selected_country_list;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
 //    static final String STATE_SCORE = "player_score";
 //    static final String STATE_LEVEL = "player_level";
@@ -115,6 +118,10 @@ public class GameActivity extends AppCompatActivity {
         life.setText(String.valueOf(the_life));
         score.setText(String.valueOf(the_score));
 
+        // preferences
+        sharedPreferences = getSharedPreferences("gameLevel", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
     }
 
     // To pause timer on minimize
@@ -177,7 +184,9 @@ public class GameActivity extends AppCompatActivity {
 
     @NonNull
     private void getLevel() {
-        level = HelperClass.readFromFile("level.txt", getApplicationContext());
+//        level = HelperClass.readFromFile("level.txt", getApplicationContext());
+
+        level = sharedPreferences.getString("gameLevel", "Master");
 
         switch (level) {
             default:

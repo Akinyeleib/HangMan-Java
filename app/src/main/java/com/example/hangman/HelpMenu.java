@@ -2,7 +2,6 @@ package com.example.hangman;
 
 import  androidx.appcompat.app.AppCompatActivity;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -14,8 +13,6 @@ import java.io.InputStreamReader;
 public class HelpMenu extends AppCompatActivity {
 
     TextView about, high_score, level;
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
