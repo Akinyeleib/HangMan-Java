@@ -78,7 +78,7 @@ public class MainMenu extends AppCompatActivity {
             String[] types = {"Random", "Beginner", "Master", "Legendary"};
             b.setItems(types, (dialog, which) -> {
                 game_level = types[which];
-//                HelperClass.writeToFile(game_level, "level.txt", getApplicationContext());
+
                 editor.putString("gameLevel", game_level);
                 editor.commit();
             });
